@@ -1,0 +1,127 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+body { 
+    background-color:  #f2f2f2;
+  
+}
+
+.tan {
+    text-align: center;
+    font-size: 19px;
+}
+
+.denised { 
+  color: white;
+  h1 { 
+    margin-top: 0;
+  }
+   #movie_movie_img { 
+     margin-bottom: 10px;
+   }
+
+	color: white;
+} 
+
+.btn-custom {
+	color: darken(#f1c40f, 5%);
+	background-color: #fff;
+	border: 1px solid darken(#f1c40f, 5%);
+	padding: 8px 20px;
+	border-radius: 5px;
+	font-family: 'Ubuntu', sans-serif;
+	&:hover {
+		text-decoration: none;
+		background-color: darken(#f1c40f, 5%);
+		color: #fff;
+		transition: 0.5s;
+	}
+}
+
+.btn-custom2 {
+	color: #333;
+	background-color: #fff;
+	border: 1px solid #222;
+	padding: 8px 20px;
+	border-radius: 5px;
+	font-family: 'Ubuntu', sans-serif;
+	&:hover {
+		text-decoration: none;
+		background-color: #333;
+		color: #fff;
+		transition: 0.5s;
+  
+	}	
+}
+
+
+.cate { 
+    
+   color: blue;
+}
+
+
+.btn4 { 
+    
+   right: 90px;
+}
+   
+  
+.product { 
+  height: 350px;
+  width: 250px;
+}          
+
+
+.product-info {
+
+box-sizing: border-box;
+	background-color: #fff;
+   border-radius: 70px;
+	padding: 1.5em 1.25em;
+	color: orange;
+
+	.product-name {
+		margin-top: 0;
+		font-size: 2em;
+	    color: black;
+		font-weight: bold
+
+
+	}
+
+
+	.product-code {
+		color: black;
+		font-size: 1.5em;
+		margin-top: 8px;
+		margin-bottom: 10px;
+		span {
+			font-size: 0.80em;
+		}	
+        
+	}
+
+	.product-prize {
+		color: black;
+		font-size: 1.05em;
+		line-height: 1.5;
+		margin-bottom: 15px;
+		margin-top: 15px;
+	}
+
+}
+
+ .movie-category { 
+		color: black;
+		font-size: 1.5em;
+		margin-top: 8px;
+		margin-bottom: 10px;
+		span {
+			font-size: 0.80em;
+		}	
+        
+	}
+ 	
+

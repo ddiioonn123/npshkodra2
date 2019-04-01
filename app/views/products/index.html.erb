@@ -1,0 +1,14 @@
+
+
+
+
+<div style="margin-left: 4%; margin-right: 4%;">
+<% @products.each do |product| %>
+<div class="col-md-3">
+<a href="/products/<%=product.id %>">
+<%= image_tag product.product_img.url(:product_index), class: "product" %>
+
+</a>
+
+</div>
+<% end %>
