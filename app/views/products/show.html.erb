@@ -1,45 +1,56 @@
+<head> 
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
 
- <div class="imgshow">
-<div class="col-md-4" >
-<%= image_tag @product.product_img.url(:product_show), class: "product-show" %>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="teshowi">
+
+<li style="display: inline-block;"><%= image_tag @product.product_img.url(:product_index), class: "fotojashow"%></li>
+
+
+<div class="col-md-8">
 </div>
- </div>
+<li style="display: inline-block; margin-left: 5%; margin-bottom: 9%;">   <table>
+<tr>
+  <th>Emri</th>
+  <th>Kategoria</th>
+  <th>Kodi</th>
+  <th>Ngjyra</th>
+</tr>
+<tr>
+  <td><%= @product.title %></td>
+  <td><%= @product.category.name %></td>
+  <td><%= @product.kodi %></td>
+  <td><%= @product.pershkrimi %> </td>
+</tr>
+</table>
+</div>
+</div>
 
-
-
-
-
- <ul style="display: inline-block">
-
-    <li style="display: inline-block">
-    
-    <div class="product-info">    
-     
-      <div class="product-name">
-        <h1 style="color: black">Emri i Produktit: <span style="font-size: 34px; color: red"> <%= @product.title %></span> </h1>
-            <div class="product-code">    
-        <hr>
-        <h3 style="color: black">Kodi: <span style="font-size: 24px; color: blue"> <%= @product.kodi %> </span></h3>
-           </div>
-           <hr>
-            <div class="product-prize">    
-        <h4 style="color: black">Qmimi: <span style="font-size: 18px; color: #99a38f"><%= @product.qmimi %>€</span></h4>
-     </div>
-     
-     </div>
-    </li>
-
-</ul>
-<% if logged_in? %>
-  <% if @product.user_id == current_user.id %>      
- 
 <div class="butons">
+<% if logged_in? %>
+<% if @product.user_id == current_user.id %>   
 <%= link_to 'Ndryshoni Produktin', edit_product_path(@product), class: "btn btn-secondary", class: "btn-custom" %>
 <%= link_to 'Fshijeni Produktin', product_path(@product), method: :delete, data: {confirm: "A jeni i sigurt?"}, class: "btn-custom2" %> 
-</div>
-<% end %> 
-
 <% end %>
+<% end %>
+</div>   
 
 
-
+</body>

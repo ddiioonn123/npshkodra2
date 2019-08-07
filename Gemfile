@@ -5,13 +5,16 @@ gem 'bcrypt', '3.1.12'
 gem 'simple_form', '~> 4.1'
 gem 'puma', '3.9.1'
 gem 'bootstrap-sass', '3.3.7'
-gem 'paperclip', '~> 4.3', '>= 4.3.6'
+gem 'paperclip', '6.1.0'
 gem 'sass-rails', '5.0.6'
 gem 'uglifier', '3.2.0'
 gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
 gem 'turbolinks', '5.0.1'
 gem 'jbuilder', '2.7.0'
+gem 'rails-angular-material'
+gem 'owlcarousel-rails'
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 group :development, :test do
 gem 'sqlite3', '1.3.13'

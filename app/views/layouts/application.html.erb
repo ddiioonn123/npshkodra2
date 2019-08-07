@@ -1,101 +1,124 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Npshkodra</title>
-    <%= csrf_meta_tags %>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script>
-  
-</script>
-<script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <%= csrf_meta_tags %>
+    <title>N.P. Shkodra</title>
+    <script src="https://kit.fontawesome.com/c4c81ac5b7.js"></script>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand tan" href="#">NPSHKODRA</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-      <div class="w3-top container">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="top-bar md-padding dialogdemoBasicUsage" id="popupContainer">
+        <div class="container">
+            <!-- Row Start -->
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
 
-    <div>
-    <ul class="navbar-nav">
-      <li class="nav-item tan">
-         <%= link_to "Ballina", home_path , class: "nav-link tan" %>
-      </li>
-            <li class="nav-item tan">
-        <a class="nav-link" href"#" style="font-size: 10px">|</a>
-      </li>
-            <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"    
-           aria-expanded="false">Modelet<span class="caret"></span></a>
-           <ul class="dropdown-menu" role="menu">
-          <% Category.all.each do |category| %>
-          <li>
-            <%= link_to category.name, products_path(category: category.name), class: "link" %>
-            <%= link_to 'Te gjitha', products_path, class: "link" %>     
-          </a>
-          </li>
-          
-          </li>
-        <% end %>
-        </ul>      
-        </li>
-    
-    
-      <li class="nav-item tan">
-        <a class="nav-link" href"#" style="font-size: 10px">|</a>
-      </li>
-      <li class="nav-item tan">
-        <a class="nav-link" href="#">Katalogi</a>
-      </li>
-      <li class="nav-item tan">
-        <a class="nav-link" href"#" style="font-size: 10px">|</a>
-      </li>
-      <li class="nav-item tan">
-        <a class="nav-link" href="#">Lokacioni</a>
-      </li>
-      <li class="nav-item tan">
-        <a class="nav-link" href"#" style="font-size: 10px">|</a>
-      </li>
-      <li class="nav-item tan">
-        <a class="nav-link" href="#">Rreth nesh</a>
-      </li>
-      <li class="nav-item tan">
-        <a class="nav-link" href"#" style="font-size: 10px">|</a>
-      </li>
+                    <ul class="left topbar-blocks">
+                        <li><a href="mailto:info@yourdomain.com"><i class="em em-email sads" aria-hidden="true"></i><span style="font-family: Karla, sans-serif; font-color: white; font-size: 11.5px;"> info@shkodragroup.com </span></a></li>
+                        <li><a href="tel:+0801 2345 6789"><i class="em em-phone sads" aria-hidden="true"></i><span style="font-family: Karla, sans-serif; font-color: white; font-size: 11.5px">  +383 49 844 225
 
- <li class="nav-item tan">
-   <% if logged_in? %>
-              <%= link_to 'Shto Produkt', new_product_path, class: "nav-link" %>
-                 <% end %>
-                 
-                 </li>
-    <li class="nav-item tan">
-         <% if logged_in? %>
+                        </span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <ul class="topbar-blocks">
+                        
+                    <% if logged_in? %>
+                    <li style="font-size: 11.5px"> <%= current_user.name %></li>
+                    <% else %>
+                    <li style="font-size: 15px" href="/login"> Login </li>
+                    <% end %>
+                    </ul>
+                </div>
+            </div>
+            <!-- Row End -->
+        </div>
+    </div>
 
-        <a class="nav-link" href"#" style="font-size: 10px">|</a>
-         <% end %>
-         
-      </li>
-    
+<div class="navs">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+        <div class="menuve" style="color: black;">
+            <a href="/home">Ballina</a>
+            <a href="/products">Produktet</a>
+            <a href="/kontakti">Kontakti</a>
+        </div>
+    </div>
+    <%= yield %>
 
-            <li class="nav-item tan">
+</body>
 
-       <% if logged_in? %>
-          <%= link_to 'Log out', logout_path, method: :delete, class: "nav-link" %>
-        <% end %>
-        </li>
-    
-    
-    </ul>
-  </div>
-  </div>
-  </div>
-</nav>
-     <%= yield %>
-  </body>
-</html>
+
+
+
+<!-- Footer Menu -->
+<footer id = "footer"> 
+		
+	<!-- Company Details -->
+	<!-- 1. Address 
+		2. Contact Number 
+		3. Enquiry Mail 
+	-->
+	<div class="company-details"> 
+		<div class="row"> 
+			<div id ="col1"> 
+				<span id = "icon" class="fa fa-map-marker"></span> 
+					
+				<span> 
+					710-B, Advant Navis Business Park, 
+					<br />Sector-142, Noida 
+				</span> 
+			</div> 
+				
+			<div id ="col2"> 
+				<span id="icon" class="fa fa-phone"></span> 
+
+				<span> 
+					Telephone:  +383 49 844 225 
+				</span> 
+			</div> 
+					
+			<div id ="col3"> 
+				<span id="icon" class="fa fa-facebook"></span> 
+				<span>npshkodra@gmail.com</span> 
+			</div> 
+		</div> 
+	</div> 
+			
+	<!-- Copyright Section -->
+	<div class="copyright"> 
+		<p>© All rights reserved | NP Shkodra.</p> 
+	
+		<ul class="contact"> 
+			<li> 
+				<a href="#" class="fa fa-twitter"> 
+					<span>Twitter</span> 
+				</a> 
+			</li> 
+			
+			<li> 
+				<a href="#" class="fa fa-facebook"> 
+					<span></span> 
+				</a> 
+			</li> 
+			
+			<li> 
+				<a href="#" class="fa fa-rss"> 
+					<span>Pinterest</span> 
+				</a> 
+			</li> 
+		</ul> 
+	</div> 
+</footer> 
+
+
+
+
+
+    </html>

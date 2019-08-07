@@ -8,15 +8,19 @@ get '/modelet', to: 'products#index'
 get '/signup', to: 'users#new'
  root 'faqetstatike#home'
 
-get '/help', to: 'faqetstatike#help'
 
 get '/login', to: 'sessions#new'
  
   post '/login', to: 'sessions#create'
  
   delete '/logout', to: 'sessions#destroy'
+  get '/sucess', to: 'faqetstatike#sucess'
 
+  get '/kontakti', to: 'faqetstatike#kontakti'
 
+  get '/katalogi', to: 'faqetstatike#katalogi'
+
+  post 'products/search' => 'products#search', as: 'search_products'
 
 
 
