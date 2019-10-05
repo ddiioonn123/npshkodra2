@@ -17,10 +17,5 @@ get '/login', to: 'sessions#new'
 
   get '/kontakti', to: 'faqetstatike#kontakti'
 
-  get '/katalogi', to: 'faqetstatike#katalogi'
-
-  post 'products/search' => 'products#search', as: 'search_products'
-
-
 
 end
