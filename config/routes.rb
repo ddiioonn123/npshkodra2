@@ -7,7 +7,6 @@ resources :products
 get '/modelet', to: 'products#index'
 get '/signup', to: 'users#new'
  root 'faqetstatike#home'
- root to: => 'products#index', :id => 'products'
 
 get '/login', to: 'sessions#new'
  
