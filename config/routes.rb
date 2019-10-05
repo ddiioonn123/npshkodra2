@@ -6,7 +6,6 @@ resources :products
   get '/home', to: 'faqetstatike#home'
 get '/modelet', to: 'products#index'
 get '/signup', to: 'users#new'
-get '/produktet', to: 'products#index'
  root 'faqetstatike#home'
 
 
