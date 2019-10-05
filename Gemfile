@@ -14,6 +14,7 @@ gem 'turbolinks', '5.0.1'
 gem 'jbuilder', '2.7.0'
 gem 'rails-angular-material'
 gem 'owlcarousel-rails'
+
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 group :development, :test do
@@ -39,6 +40,7 @@ end
 
 group :production do
 gem 'pg', '0.18.4'
+gem 'rails_12factor', '0.0.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
