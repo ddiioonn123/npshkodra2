@@ -14,7 +14,6 @@ gem 'turbolinks', '5.0.1'
 gem 'jbuilder', '2.7.0'
 gem 'rails-angular-material'
 gem 'owlcarousel-rails'
-gem 'rails_12factor', group: :production
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 group :development, :test do
@@ -28,7 +27,6 @@ gem 'listen', '3.1.5'
 gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 gem 'spring', '2.0.2'
 gem 'spring-watcher-listen', '2.0.1'
-
 end
 
 group :test do
