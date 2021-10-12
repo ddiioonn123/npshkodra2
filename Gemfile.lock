@@ -146,7 +146,8 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    puma (3.9.1)
+    puma (4.3.9)
+      nio4r (~> 2.0)
     rack (2.0.7)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -232,7 +233,6 @@ GEM
       tzinfo (>= 1.0.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
-    wdm (0.1.1)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -262,7 +262,7 @@ DEPENDENCIES
   owlcarousel-rails
   paperclip (= 6.1.0)
   pg (= 0.18.4)
-  puma (= 3.9.1)
+  puma (= 4.3.9)
   rails (= 5.1.6)
   rails-angular-material
   rails-controller-testing (= 1.0.2)
@@ -275,7 +275,6 @@ DEPENDENCIES
   turbolinks (= 5.0.1)
   tzinfo-data
   uglifier (= 3.2.0)
-  wdm (>= 0.1.0)
   web-console (= 3.5.1)
 
 BUNDLED WITH
